@@ -1,0 +1,151 @@
+html {
+    font-size: 10px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+#main {
+    display: grid;
+    grid-template-areas: 
+    "header header header header header header header header header"
+    "img img img img img img img img img"
+    ". . . main main main side . ."
+    ". . memo memo memo memo memo . ."
+    ". . finf finf finf finf finf . .";
+    grid-template-columns: repeat(9, 1fr);
+    justify-items: center;
+    gap: 10px;   
+    padding: 5px;
+    background: linear-gradient(#eee, lightgray);
+}
+
+.introduction {
+    grid-area: header;
+}
+
+.tribute_image_container {
+    grid-area: img;    
+}
+
+.additional_info {
+    grid-area: side;   
+    align-self: center;
+    max-width: 100px;
+    background: black;
+    color: blanchedalmond;
+    padding: 5px;
+    text-align: center;
+    transform: skewX(-5deg);
+}
+
+h3.center,
+.additional_info p {
+    transform: skewX(5deg);
+}
+
+.accomplishments {
+    grid-area: main;     
+}
+
+.commemorations {
+    grid-area: memo;    
+}
+
+.further_info {
+    grid-area: finf;   
+}
+
+.caption {
+    margin-top: 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.image_container {
+    background: white;
+    padding: 5px 10px;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+    h2 {
+        font-size: 2.1rem;
+    }
+    #main {
+    grid-template-areas: 
+    "header header"
+    "img img "
+    "main main"
+    "side side"
+    "memo memo"
+    "finf finf";
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    }
+    .additional_info {
+        max-width: 280px;
+    }
+}
+
+.image_container {
+    margin: 0;
+}
+
+.image {
+    max-width: 100%;
+    min-width: 280px;
+    display: block;
+    height: auto;
+    min-height: 250px;
+}
+
+.accomplishments_list {
+    min-width: 250px;    
+    max-width: 750px;   
+    margin: 0 auto; 
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.commemorations {
+    max-width: 650px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+a {
+    color:orange;
+}
+
+a:visited {
+    color: black
+} 
+
+a:hover {
+    color: orangered;
+}
